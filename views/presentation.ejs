@@ -1,0 +1,23 @@
+<!-- views/home.ejs -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style/style.css" type="text/css" />
+</head>
+
+<body>
+    <div class="container">
+        <%- include('partials/navbar')%>
+            <div class="presentation">
+                <iframe id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="550" height="400" src="https://prezi.com/embed/z0ba2lx510ya/?bgcolor=ffffff&lock_to_path=0&autoplay=0&autohide_ctrls=0&landing_data=bHVZZmNaNDBIWnNjdEVENDRhZDFNZGNIUE43MHdLNWpsdFJLb2ZHanI5N2VkQzNySkg0R3lkSEVvQkpiV0RkTnhBPT0&landing_sign=6zr5RK5rg_ZmoiV-rqCZwXc_j9iI6HT_P_1n6nF1Gbw"></iframe>
+            </div>
+            <%- include('partials/footer')%>
+    </div>
+</body>
+
+</html>

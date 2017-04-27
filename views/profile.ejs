@@ -1,0 +1,49 @@
+<!-- views/home.ejs -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style/style.css" type="text/css" />
+</head>
+
+<body>
+    <div class="container">
+        <%- include('partials/navbar')%>
+            <h2>Your registered accounts</h2><a class="btn btn-primary btn-xs" href="/newacc">Register new account</a>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th style="text-align: center;">Account Login</th>
+                        <th style="text-align: center;">Account Password</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if( typeof contas != 'undefined'){ %>
+                        <% contas.forEach(function(conta){ %>
+                            <tr>
+                                <td>
+                                    <%= (conta.accountName) %>
+                                </td>
+                                <td>
+                                    <%= (conta.accountPassword) %>
+                                </td>
+                                <td>
+                                    <form action="/delete?id=<%= conta.accountName %>" method="post">
+                                        <button class="btn btn-primary btn-xs" type="submit">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <%})%>
+                                <%}%>
+                </tbody>
+            </table>
+    </div>
+    <%- include('partials/footer')%>
+</body>
+
+</html>
