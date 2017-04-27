@@ -1,3 +1,8 @@
 node_modules/
 
+backup-app.js
+
+backup-cloudant.json
+
 vcap-local.json
+
